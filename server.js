@@ -8,9 +8,6 @@ app.use(express.json());
 
 const SECRET_KEY = "trabalho_final_super_secreto";
 
-// ==========================================
-// MIDDLEWARE DE AUTENTICAÇÃO JWT
-// ==========================================
 const authenticateToken = (req, res, next) => {
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
@@ -24,9 +21,6 @@ const authenticateToken = (req, res, next) => {
     });
 };
 
-// ==========================================
-// ROTAS DE AUTENTICAÇÃO
-// ==========================================
 app.post('/auth/login', (req, res) => {
     const { username, password } = req.body;
     if (!username || !password) return res.status(400).json({ error: "Usuário e senha são obrigatórios." });
