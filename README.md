@@ -122,3 +122,6 @@ Requisição `GET /movies` retornando os dados salvos no SQLite, incluindo relac
 ### 3. Cadastro de Novo Filme (POST)
 Requisição `POST /movies` utilizando o Token de autorização para salvar um novo registro no banco.
 ![Adicionar Filmes](./Prints_Postman/AdicionarFilmes.png)
+
+## Link de Deploy
+> **Nota técnica:** Devido a incompatibilidades de compilação nativa da biblioteca `sqlite3` nos ambientes Free do Render/Railway (erro `DLOPEN_FAILED`), o deploy online foi substituído pela documentação completa e testes automatizados locais. A API está 100% funcional em ambiente local conforme evidências abaixo.
